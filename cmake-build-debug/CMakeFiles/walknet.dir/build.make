@@ -60,15 +60,15 @@ include CMakeFiles/walknet.dir/flags.make
 CMakeFiles/walknet.dir/main.cpp.o: CMakeFiles/walknet.dir/flags.make
 CMakeFiles/walknet.dir/main.cpp.o: ../main.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fahr/git/walknet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/walknet.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/walknet.dir/main.cpp.o -c /home/fahr/git/walknet/main.cpp
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/walknet.dir/main.cpp.o -c /home/fahr/git/walknet/main.cpp
 
 CMakeFiles/walknet.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/walknet.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/fahr/git/walknet/main.cpp > CMakeFiles/walknet.dir/main.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/fahr/git/walknet/main.cpp > CMakeFiles/walknet.dir/main.cpp.i
 
 CMakeFiles/walknet.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/walknet.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/fahr/git/walknet/main.cpp -o CMakeFiles/walknet.dir/main.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/fahr/git/walknet/main.cpp -o CMakeFiles/walknet.dir/main.cpp.s
 
 # Object files for target walknet
 walknet_OBJECTS = \
@@ -79,6 +79,11 @@ walknet_EXTERNAL_OBJECTS =
 
 walknet: CMakeFiles/walknet.dir/main.cpp.o
 walknet: CMakeFiles/walknet.dir/build.make
+walknet: /usr/lib/x86_64-linux-gnu/libsfml-system.so
+walknet: /usr/lib/x86_64-linux-gnu/libsfml-window.so
+walknet: /usr/lib/x86_64-linux-gnu/libsfml-graphics.so
+walknet: /usr/lib/x86_64-linux-gnu/libsfml-network.so
+walknet: /usr/lib/x86_64-linux-gnu/libsfml-audio.so
 walknet: CMakeFiles/walknet.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/fahr/git/walknet/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable walknet"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/walknet.dir/link.txt --verbose=$(VERBOSE)
